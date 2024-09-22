@@ -182,7 +182,7 @@ function tool_crawler_sql_oversize_filter($tablealias = null) {
              OR ( {$tbl}filesize IS NULL
                   AND {$tbl}lastcrawled IS NOT NULL
                 )
-             OR ${tbl}filesizestatus = ?
+             OR {$tbl}filesizestatus = ?
               )";
 
     $bigfilesize = get_config('tool_crawler', 'bigfilesize');
